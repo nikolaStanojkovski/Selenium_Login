@@ -13,4 +13,8 @@ public class SitePage extends BasePage {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("icon-lock"))).isDisplayed();
     }
 
+    public String getLoginMessage() {
+        return driver.findElement(By.id("flash")).getText();
+    }
+
 }

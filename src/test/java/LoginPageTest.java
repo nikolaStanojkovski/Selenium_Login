@@ -53,9 +53,9 @@ public class LoginPageTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
         loginPage.login("tomsmith", "SuperSecretPassword!");
-        String message = loginPage.getErrorMessage();
 
         // first option
+        String message = new SitePage(driver).getLoginMessage();
         Assert.assertEquals(message, "You logged into a secure area!\n" +
                 "×");
 
